@@ -6,7 +6,7 @@ services:
         image: postgres
         environment:
           POSTGRES_USER: "postgres"
-          POSTGRES_PASSWORD: "buckstore@12"
+          POSTGRES_PASSWORD: "senha"
           PGDATA: /data/postgres
         volumes:
            - postgres:/data/postgres

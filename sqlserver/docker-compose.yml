@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   mssql:
+    container_name: mssql
     image: 'microsoft/mssql-server-linux:2017-latest'
     hostname: 'mssql'
     ports:

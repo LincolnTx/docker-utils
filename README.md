@@ -1,5 +1,5 @@
 ## Docker utils
-Just a repo with a bunch of docker and docker compose files. Just the images that a common
+Just a repo with a bunch of docker and docker compose files. Just the images that I common
 use
 
 ### Run

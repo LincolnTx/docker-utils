@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mysql-e2e:
+    container_name: mysql-e2e
+    image: mysql:5.7
+    ports:
+      - '3381:3306'
+    environment:
+      - MYSQL_DATABASE=vipcommerce_campanha_frete_service
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - campanha-frete-service-network
+    volumes:
+      - ./db_data/mysql-e2e:/var/lib/mysql
+networks:
+  campanha-frete-service-network:
+    driver: bridge

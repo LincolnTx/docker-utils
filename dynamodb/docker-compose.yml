@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  dynamodb-testing:
+    image: amazon/dynamodb-local
+    hostname: dynamodb-testing
+    container_name: dynamodb-testing
+    command: '-jar DynamoDBLocal.jar -sharedDb -inMemory'
+    networks:
+      - vipcommerce-seda-aggregator-network
+    ports:
+      - '8052:8000'
+
+networks:
+  vipcommerce-seda-aggregator-network:
+    driver: bridge
